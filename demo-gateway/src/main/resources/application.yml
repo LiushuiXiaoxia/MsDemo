@@ -1,0 +1,29 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: demo-gateway
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        register: true
+        enabled: true
+        root: /ifms
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:8020/eureka/
+
+zuul:
+  routes:
+#    demo-app:
+#      path: /app/**
+    demo-client:
+      path: /client/**
+    demo-service:
+      path: /service/**
+    github:
+      uri:

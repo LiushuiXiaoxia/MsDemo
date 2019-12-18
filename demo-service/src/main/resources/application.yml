@@ -1,0 +1,28 @@
+server:
+  port: 8031
+
+spring:
+  application:
+    name: demo-service
+#  cloud:
+#    zookeeper:
+#      connect-string: localhost:2181
+#      discovery:
+#        register: true
+#        enabled: true
+#        root: /ifms
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8021/eureka,http://127.0.0.1:8022/eureka
+
+#dubbo:
+#  application:
+#    name: dubbo-service
+#  protocol:
+#    name: dubbo
+#  #    port: 20880
+#  registry:
+#    address: zookeeper://127.0.0.1:2181
+#  scan#    base-packages: com.example.demoservice.impl

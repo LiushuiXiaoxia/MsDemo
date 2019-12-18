@@ -1,0 +1,20 @@
+server:
+  port: 8022
+
+eureka:
+  instance:
+    hostname: e2
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    enableSelfPreservation: false
+    serviceUrl:
+      defaultZone: http://e1:${server.port}/eureka/
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
