@@ -4,10 +4,6 @@ plugins {
     id 'java'
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
-
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -18,20 +14,12 @@ configurations {
     all*.exclude module: 'slf4j-log4j12'
 }
 
-repositories {
-    mavenCentral()
-}
-
-ext {
-    set('springCloudVersion', "Greenwich.SR3")
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation('org.springframework.boot:spring-boot-starter-web')
 
-     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 //    implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
     compile 'org.apache.zookeeper:zookeeper:3.4.13'
 

@@ -4,8 +4,6 @@ plugins {
     id 'java'
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 configurations {
@@ -16,14 +14,6 @@ configurations {
 
 configurations {
     all*.exclude module: 'slf4j-log4j12'
-}
-
-repositories {
-    mavenCentral()
-}
-
-ext {
-    set('springCloudVersion', "Greenwich.SR3")
 }
 
 dependencies {
