@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'org.springframework.boot' version '2.1.11.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
 }
@@ -12,15 +12,24 @@ configurations {
     }
 }
 
+configurations {
+    all*.exclude module: 'slf4j-log4j12'
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-
-    // implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-    implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
-    compile 'org.apache.zookeeper:zookeeper:3.4.13'
-
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-zuul'
 
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    // implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
+    // compile 'org.apache.zookeeper:zookeeper:3.4.13'
+
+    // swagger2
+    implementation 'io.springfox:springfox-swagger2:2.7.0'
+    implementation 'io.springfox:springfox-swagger-ui:2.7.0'
+
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

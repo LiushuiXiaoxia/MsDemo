@@ -23,7 +23,6 @@ public class Config {
 
     @Bean
     public CustomRouteLocator routeLocator() {
-        CustomRouteLocator routeLocator = new CustomRouteLocator("aaa", this.zuulProperties);
-        return routeLocator;
+        return new CustomRouteLocator("aaa", this.zuulProperties);
     }
 }

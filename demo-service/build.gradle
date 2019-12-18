@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'org.springframework.boot' version '2.1.11.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
 }
@@ -20,14 +20,17 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
 
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-//    implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
-    compile 'org.apache.zookeeper:zookeeper:3.4.13'
+    // implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
+    // implementation 'org.apache.zookeeper:zookeeper:3.4.13'
 
-    implementation 'com.alibaba.boot:dubbo-spring-boot-starter:0.1.0'
-    implementation 'com.101tec:zkclient:0.7'
+    // implementation 'com.alibaba.boot:dubbo-spring-boot-starter:0.1.0'
+    // implementation 'com.101tec:zkclient:0.7'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
