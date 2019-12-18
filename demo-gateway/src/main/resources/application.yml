@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: demo-gateway
+  zipkin:
+    base-url: http://localhost:9000
+
 #  cloud:
 #    zookeeper:
 #      connect-string: localhost:2181

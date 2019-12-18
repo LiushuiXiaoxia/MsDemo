@@ -2,7 +2,6 @@ package com.example.democlient.controller;
 
 import cn.mycommons.javalib.ITestApi;
 import com.example.democlient.api.IFeignApi;
-import jdk.nashorn.internal.ir.annotations.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,10 +15,9 @@ public class ClientController {
     @Autowired
     IFeignApi feignApi;
 
-    @RequestMapping
+    @RequestMapping("/feign")
     public String callService() {
         return feignApi.test();
-//        return "success.";
     }
 
     @RequestMapping("/test")

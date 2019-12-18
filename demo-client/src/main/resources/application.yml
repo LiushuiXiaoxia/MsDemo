@@ -4,13 +4,16 @@ server:
 spring:
   application:
     name: demo-client
-#  cloud:
-#    zookeeper:
-#      connect-string: localhost:2181
-#      discovery:
-#        register: true
-#        enabled: true
-#        root: /ifms
+  zipkin:
+    base-url: http://localhost:9000
+  #  cloud:
+  #    zookeeper:
+  #      connect-string: localhost:2181
+  #      discovery:
+  #        register: true
+  #        enabled: true
+  #        root: /ifms
+
 
 eureka:
   client:
