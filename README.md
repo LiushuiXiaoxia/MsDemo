@@ -2,9 +2,11 @@
 
 ---
 
-# Gateway
+# Zuul(Gateway)
 
 8010
+
+http://localhost:8010/client/client/test?token=abc123
 
 # Eureka
 
@@ -22,6 +24,8 @@ http://localhost:8020/
 
 # Zipkin
 
-9000
+http://127.0.0.1:9000/zipkin/
 
-http://localhost:9000/
+```bash
+docker run -d -p 9000:9411 --name zipkin-server openzipkin/zipkin 
+```

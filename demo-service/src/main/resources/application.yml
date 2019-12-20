@@ -4,8 +4,14 @@ server:
 spring:
   application:
     name: demo-service
+  sleuth:
+    sampler:
+      probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+    trace-id128: true
   zipkin:
     base-url: http://localhost:9000
+    sender:
+      type: web
 
 #  cloud:
 #    zookeeper:
@@ -28,4 +34,7 @@ eureka:
 #  #    port: 20880
 #  registry:
 #    address: zookeeper://127.0.0.1:2181
+
+logging:
+  config: classpath:logback-spring.xml
 #  scan#    base-packages: com.example.demoservice.impl
