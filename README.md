@@ -10,11 +10,19 @@ http://localhost:8010/client/client/test?token=abc123
 
 http://localhost:8010/client/client/feign?token=abc123
 
-# Eureka
+# Service Discovery
+
+## Eureka
 
 8020
 
 http://localhost:8020/
+
+## Zookeeper
+
+```bash
+docker run --name my-zookeeper -d zookeeper
+```
 
 # Client
 
