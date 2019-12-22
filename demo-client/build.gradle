@@ -23,19 +23,27 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     // implementation 'org.springframework.cloud:spring-cloud-starter-ribbon'
 
+    // zk
     implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
     implementation 'org.apache.zookeeper:zookeeper:3.4.13'
 
-//    compile 'com.ctrip.framework.apollo:apollo-client:1.1.1'
+    // apollo config
+    compile 'com.ctrip.framework.apollo:apollo-client:1.1.1'
+
 //    compile 'com.alibaba.boot:dubbo-spring-boot-starter:0.1.0'
 //    compile 'com.101tec:zkclient:0.7'
 
 //    compile 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.3'
 //    compile 'org.apache.dubbo:dubbo:2.6.5'
 
+    // zipkin
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
     implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+
+    // swagger2
+    implementation 'io.springfox:springfox-swagger2:2.7.0'
+    implementation 'io.springfox:springfox-swagger-ui:2.7.0'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

@@ -26,14 +26,6 @@ public class ClientController {
     }
 
 
-    @Value("${msg:abc123}")
-    String msg;
-
-    @RequestMapping("/apollo")
-    public String apollo() {
-        return msg;
-    }
-
     ITestApi testApi;
 
     @RequestMapping("/dubbo")

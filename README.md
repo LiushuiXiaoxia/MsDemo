@@ -1,8 +1,28 @@
+<!-- TOC -->
+
+- Spring Cloud Demo
+- Gateway
+    - Zuul
+- Service Discovery
+    - Eureka
+    - Zookeeper
+- Biz
+    - Client
+    - Service
+- Trace
+    - Zipkin
+- Config
+    - Apollo
+
+<!-- /TOC -->
+
 # Spring Cloud Demo
 
 ---
 
-# Zuul(Gateway)
+# Gateway
+
+## Zuul
 
 8010
 
@@ -24,18 +44,36 @@ http://localhost:8020/
 docker run --name my-zookeeper -d zookeeper
 ```
 
-# Client
+# Biz
 
-8030
 
-# Service
+## Client
 
-8040
+http://127.0.0.1:8030/swagger-ui.html
 
-# Zipkin
+
+## Service
+
+http://127.0.0.1:8040/swagger-ui.html
+
+# Trace
+
+## Zipkin
 
 http://127.0.0.1:9411/zipkin/
 
 ```bash
 docker run -d -p 9411:9411 --name zipkin-server openzipkin/zipkin 
+```
+
+# Config
+
+## Apollo
+
+https://github.com/ctripcorp/apollo/wiki/Apollo-Quick-Start-Docker%E9%83%A8%E7%BD%B2
+
+
+```bash
+cd z/config
+docker-compose up
 ```
