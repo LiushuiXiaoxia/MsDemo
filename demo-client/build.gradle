@@ -23,9 +23,8 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     // implementation 'org.springframework.cloud:spring-cloud-starter-ribbon'
 
-    // zk
-    implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
-    implementation 'org.apache.zookeeper:zookeeper:3.4.13'
+    // consul
+    implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
 
     // apollo config
     compile 'com.ctrip.framework.apollo:apollo-client:1.1.1'

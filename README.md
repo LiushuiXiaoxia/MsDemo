@@ -44,6 +44,15 @@ http://localhost:8020/
 docker run --name my-zookeeper -d zookeeper
 ```
 
+## Consul
+
+```bash
+brew install consul
+consul agent -dev -advertise 127.0.0.1
+```
+
+http://localhost:8500
+
 # Biz
 
 

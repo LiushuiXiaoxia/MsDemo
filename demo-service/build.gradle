@@ -21,9 +21,8 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    // zk
-    implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
-    implementation 'org.apache.zookeeper:zookeeper:3.4.13'
+    // consul
+    implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
 
     // implementation 'com.alibaba.boot:dubbo-spring-boot-starter:0.1.0'
     // implementation 'com.101tec:zkclient:0.7'
