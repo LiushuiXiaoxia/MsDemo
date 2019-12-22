@@ -8,6 +8,8 @@
 
 http://localhost:8010/client/client/test?token=abc123
 
+http://localhost:8010/client/client/feign?token=abc123
+
 # Eureka
 
 8020
@@ -24,8 +26,8 @@ http://localhost:8020/
 
 # Zipkin
 
-http://127.0.0.1:9000/zipkin/
+http://127.0.0.1:9411/zipkin/
 
 ```bash
-docker run -d -p 9000:9411 --name zipkin-server openzipkin/zipkin 
+docker run -d -p 9411:9411 --name zipkin-server openzipkin/zipkin 
 ```

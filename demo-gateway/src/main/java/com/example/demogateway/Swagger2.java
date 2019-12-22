@@ -25,7 +25,7 @@ public class Swagger2 {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("ci web api")
+                .title("demo gateway api")
                 .version("v1.0")
                 .build();
     }

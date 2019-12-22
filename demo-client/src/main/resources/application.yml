@@ -4,8 +4,14 @@ server:
 spring:
   application:
     name: demo-client
+  sleuth:
+    sampler:
+      probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+    trace-id128: true
   zipkin:
-    base-url: http://localhost:9000
+    base-url: http://127.0.0.1:9411
+    sender:
+      type: web
   #  cloud:
   #    zookeeper:
   #      connect-string: localhost:2181
