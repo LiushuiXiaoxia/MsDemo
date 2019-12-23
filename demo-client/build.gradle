@@ -23,8 +23,9 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     // implementation 'org.springframework.cloud:spring-cloud-starter-ribbon'
 
-    // consul
-    implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
+    // nacos
+    implementation 'org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:0.2.2.RELEASE'
+    implementation 'org.springframework.cloud:spring-cloud-starter-alibaba-nacos-config:0.2.2.RELEASE'
 
     // apollo config
     compile 'com.ctrip.framework.apollo:apollo-client:1.1.1'

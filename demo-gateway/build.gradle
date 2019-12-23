@@ -20,8 +20,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-zuul'
 
-    // consul
-    implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
+    // nacos
+    implementation 'org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:0.2.2.RELEASE'
+    implementation 'org.springframework.cloud:spring-cloud-starter-alibaba-nacos-config:0.2.2.RELEASE'
 
     // swagger2
     implementation 'io.springfox:springfox-swagger2:2.7.0'

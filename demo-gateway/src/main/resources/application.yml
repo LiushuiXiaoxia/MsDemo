@@ -17,9 +17,9 @@ spring:
       connect-string: 127.0.0.1:2181
       discovery:
         root: /ms-demo
-    consul:
-      host: 127.0.0.1
-      port: 8500
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 
 eureka:
   client:
