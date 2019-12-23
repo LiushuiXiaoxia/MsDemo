@@ -1,9 +1,13 @@
 server:
   port: 8040
-
+#msg: msg from local
+#config:
+#  message: config msg from local
 spring:
   application:
     name: demo-service
+  profiles:
+    active: dev
   sleuth:
     sampler:
       probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
@@ -20,6 +24,26 @@ spring:
     consul:
       host: 127.0.0.1
       port: 8500
+      discovery: # 服务发现配置
+        service-name: ${spring.application.name}
+        enabled: true
+        register: true
+        deregister: true
+        prefer-ip-address: true
+        health-check-interval: 10s
+        health-check-critical-timeout: 30s
+        health-check-path: /actuator/health
+        # 应用名称+服务器IP+端口
+        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+      config:
+        enabled: true
+        format: yaml
+        default-context: ${spring.application.name}
+        prefix: config
+        profile-separator: '-'
+        data-key: data
+        watch:
+          enabled: true
 
 eureka:
   client:
