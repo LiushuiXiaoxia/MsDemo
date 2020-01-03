@@ -1,11 +1,15 @@
 <!-- TOC -->
 
 - Spring Cloud Demo
+- Nginx
+    - hosts
+    - nginx
 - Gateway
     - Zuul
 - Service Discovery
     - Eureka
     - Zookeeper
+    - Consul
 - Biz
     - Client
     - Service
@@ -19,6 +23,40 @@
 # Spring Cloud Demo
 
 ---
+
+# Nginx 
+
+## hosts
+
+```bash
+# micro service demo
+127.0.0.1 msdemo.com
+```
+
+http://msdemo.com
+
+## nginx
+
+```nginx
+upstream ms_gateway {
+	server                 127.0.0.1:8010;
+}
+
+server {
+	listen                 80;
+	server_name            msdemo.com;
+	access_log             /usr/local/var/log/nginx/msdemo.log;
+	error_log              /usr/local/var/log/nginx/msdemo-error.log;
+
+	location / {
+		proxy_pass            http://ms_gateway;
+		proxy_set_header      Host $host; # 保留代理之前的host
+		proxy_set_header      X-Real-IP $remote_addr; # 保留代理之前的真实客户端ip
+		index                 index.html index.htm;
+		client_max_body_size  150M;
+	}
+}
+```
 
 # Gateway
 

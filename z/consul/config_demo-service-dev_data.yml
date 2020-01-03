@@ -1,0 +1,6 @@
+# config/demo-service-dev/data
+
+
+msg: msg from consul
+config:
+  message: config msg from consul
