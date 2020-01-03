@@ -82,6 +82,9 @@ docker run -d -p 9411:9411 --name zipkin-server openzipkin/zipkin
 https://github.com/ctripcorp/apollo/wiki/Apollo-Quick-Start-Docker%E9%83%A8%E7%BD%B2
 
 
+http://localhost:8070/
+apollo / admin
+
 ```bash
 cd z/config
 docker-compose up
