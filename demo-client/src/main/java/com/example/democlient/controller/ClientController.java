@@ -1,6 +1,7 @@
 package com.example.democlient.controller;
 
 import cn.mycommons.javalib.ITestApi;
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.example.democlient.api.IFeignApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,6 +35,7 @@ public class ClientController {
         return msg;
     }
 
+    @Reference
     ITestApi testApi;
 
     @RequestMapping("/dubbo")

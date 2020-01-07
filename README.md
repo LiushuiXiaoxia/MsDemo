@@ -10,6 +10,8 @@ http://localhost:8010/client/client/test?token=abc123
 
 http://localhost:8010/client/client/feign?token=abc123
 
+http://localhost:8010/client/client/dubbo?token=abc123&a=1&b=2
+
 # Eureka
 
 8020
